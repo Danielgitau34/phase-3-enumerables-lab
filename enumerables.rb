@@ -23,5 +23,17 @@ def spiciest_foods(spicy_foods)
   spicy_foods.select do |spicyfood|
     spicyfood[:heat_level] > 5
  end
+end# given an array of spicy foods, **output to the terminal**
+# each spicy food in the following format: 
+# Buffalo Wings (American) | Heat Level: 🌶🌶🌶
+# HINT: you can use * with a string to produce the correct number of 🌶 emoji. 
+# "hello" * 3 == "hellohellohello"
+def print_spicy_foods(spicy_foods)
+  # your code here
+   spicy_foods.each do |spicyfood| 
+  puts "#{spicyfood[:name]} (#{spicyfood[:cuisine]}) | Heat Level: #{'🌶'* spicyfood[:heat_level]}" 
+  end
 end
+
+
 
